@@ -1,0 +1,1 @@
+* Client: Blazor WebAssembly .Net 6.0
