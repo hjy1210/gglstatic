@@ -1,0 +1,16 @@
+﻿@inject HttpClient http
+
+<h3>CallFunction1</h3>
+<p>@message</p>
+<button @onclick="Do">Click me</button>
+
+@code {
+    string message = "";
+    async Task Do()
+    {
+        var stream = await http.GetStreamAsync("api/function1?name=楊宏章");
+        StreamReader sr = new StreamReader(stream);
+        var data = sr.ReadToEnd();
+        if (data != null) message = data;
+    }
+}
