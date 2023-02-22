@@ -1,5 +1,12 @@
-* Client: Blazor WebAssembly(.Net 6.0)
-* 加入 Azure Static Web App workflow(Azure Portal)
+## 參考資料
+* [Azure Static Web Apps documentation](https://learn.microsoft.com/en-us/azure/static-web-apps/) 的 [Quickstart: Building your first static site with Azure Static Web Apps](https://learn.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=blazor)
+* [Azure Static Web Apps documentation](https://learn.microsoft.com/en-us/azure/static-web-apps/) 的 [Build an Azure Static Web Apps website with Blazor and serverless API](https://learn.microsoft.com/en-us/azure/static-web-apps/deploy-blazor)
+* [Azure Static Web Apps 課程](https://learn.microsoft.com/en-us/training/paths/azure-static-web-apps/) 的 [Publish a Blazor WebAssembly app and .NET API with Azure Static Web Apps](https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api-dotnet/)
+
+參考上述三文件，開始建構 gglstatic 方案。
+## 新增 gglstatic 方案與 Client 專案
+* 新增 gglstatic 方案，第一個專案 Client: Blazor WebAssembly(.Net 6.0) 專案
+* 參考 [Publish a Blazor WebAssembly app and .NET API with Azure Static Web Apps](https://learn.microsoft.com/en-us/training/modules/publish-app-service-static-web-app-api-dotnet/) 加入 Azure Static Web App workflow(Azure Portal)
 
 ## 加入 Shared
 * 加入類別庫專案 Shared(.Net Standard 2.0)
@@ -15,3 +22,5 @@
 * Client 裡面新增razor 元件 CallFunction1,razor，裡面呼叫 Api 的 Function1
 * Client 的 Index.razor 使用了 CallFunction1,razor
 * Client 的 FetchData.razor 頁面，修改成呼叫 Api 的 WeatherForecastFunction。
+
+警告: 可以直接瀏覽到Api去，例如 https://......azurestaticapps.net/api/WeatherForecastFunction，所以安全性需要加強。可參考 [Authenticate Blazor WebAssembly with Azure Static Web Apps](https://anthonychu.ca/post/blazor-auth-azure-static-web-apps/#:~:text=To%20set%20up%20a%20Blazor,the%20logged%20in%20user's%20identity)
